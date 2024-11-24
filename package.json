@@ -1,0 +1,15 @@
+{
+  "name": "pptr-example",
+  "version": "1.0.0",
+  "description": "Example project that loads national bank's exchange rate and checks the rate of the given date.",
+  "main": "example.js",
+  "scripts": {
+    "start": "node example.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Halkin",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^23.9.0"
+  }
+}

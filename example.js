@@ -13,9 +13,9 @@ const puppeteer = require('puppeteer');
     deviceScaleFactor: 1,
   });
 
-  await page.waitFor(1000);
+  await _wait(1000);
   await page.goto('https://bank.gov.ua/markets/exchangerates');
-  await page.waitFor(1000);
+  await _wait(1000);
 
   const inputDateElement = await page.$('input#date');
 
@@ -32,7 +32,7 @@ const puppeteer = require('puppeteer');
 
   await page.keyboard.press('Enter');
 
-  await page.waitFor(1000);
+  await _wait(1000);
   await page.screenshot({path: 'bank' + Date.now() + '.png'});
 
 
@@ -43,3 +43,7 @@ const puppeteer = require('puppeteer');
   await browser.close();
 
 })();
+
+function _wait(ms) {
+  return new Promise(resolve => setTimeout(() => resolve(), ms));
+}
