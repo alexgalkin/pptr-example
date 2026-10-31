@@ -10,6 +10,6 @@
   "author": "Alex Halkin",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^23.9.0"
+    "puppeteer": "^25.16.0"
   }
 }
